@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Events</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <!--
+        First display list of events
+        Then a form to create an events
+        Lastly a form to update said events
+    -->
+    <div class="container-lg p-5">
+        <div class="events">
+            <h1>Events</h1>
+            <div class="eventList">
+                <ul id='eventList' class="list-group">
+                    <li class="list-group-item">Fake Event</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="createEvent mb-5">
+            <h1>Create an event with the form below</h1>
+
+            <form class='formInput'>
+                <div class='mb-3'>
+                    <label for="name" class="form-label">Event Name</label>
+                    <input name ='name' class="form-control" type="text">
+                </div>
+
+                <div class='mb-3'>
+                    <label for="status" class="form-label">Status</label>
+                    <input name='status' class="form-control" type="text">
+                </div>
+
+                <div class='mb-3'>
+                    <label for="intro" class="form-label">Event intro</label>
+                    <input name='intro' class="form-control" type="text">
+                </div>
+
+                <div class='mb-3'>
+                    <label for="time_zone" class="form-label">Time Zone</label>
+                    <input name='time_zone' class="form-control" type="text">
+                </div>
+
+                <div class='mb-3'>
+                    <label for="start_time" class="form-label">Start Time</label>
+                    <input name='start_time' class="form-control" type="time">
+                </div>
+
+                <button class="btn btn-primary" type='submit'>Create Event</button>
+
+            </form>
+
+        </div>
+
+        <div class="updateEvent">
+            <h2>Update an Event</h2>
+            <p>Leave fields you don't wanna update blank</p>
+
+            <form class='updateForm'>
+                <div class='mb-3'>
+                    <label for="eventId" class="form-label">Event Id (required)</label>
+                    <input name ='eventId' class="form-control" type="text" required>
+                </div>
+
+
+                <div class='mb-3'>
+                    <label for="name" class="form-label">Event Name</label>
+                    <input name ='name' class="form-control" type="text">
+                </div>
+
+                <div class='mb-3'>
+                    <label for="status" class="form-label">Status</label>
+                    <input name='status' class="form-control" type="text">
+                </div>
+
+                <div class='mb-3'>
+                    <label for="intro" class="form-label">Event intro</label>
+                    <input name='intro' class="form-control" type="text">
+                </div>
+
+                <div class='mb-3'>
+                    <label for="time_zone" class="form-label">Time Zone</label>
+                    <input name='time_zone' class="form-control" type="text">
+                </div>
+
+                <div class='mb-3'>
+                    <label for="start_time" class="form-label">Start Time</label>
+                    <input name='start_time' class="form-control" type="time">
+                </div>
+
+                <button class="btn btn-primary" type='submit'>Update Event</button>
+
+            </form>
+
+        </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</body>
+<script type='text/javascript' src="index.js"></script>
+
+</html>
