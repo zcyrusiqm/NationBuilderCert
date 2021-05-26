@@ -1,6 +1,7 @@
 //Axios get current surveys from API endpoint first /api/v1/sites/:site_slug/pages/surveys
 //Display most recent survey and have user answer that
 //When they hit the submit button axios post call to /api/v1/survey_responses
+// Survey id, question id, and person id will be fetched on page load
 import { useState } from 'react';
 import axios from 'axios';
 const API_URL = 'placeholder'
