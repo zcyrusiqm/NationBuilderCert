@@ -12,14 +12,14 @@ function App() {
 
   return (
     <Router>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <Link to='/'><a class="nav-link" aria-current="page">Make Survey</a></Link>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to='/'><span className='nav-link'  aria-current="page">Make Survey</span></Link>
               </li>
-              <li class="nav-item">
-              <Link to='/surveys'><a class="nav-link" aria-current="page">Answer Survey</a></Link>
+              <li className="nav-item">
+              <Link to='/surveys'><span className='nav-link' aria-current="page">Answer Survey</span></Link>
               </li>
             </ul>
 
@@ -28,7 +28,6 @@ function App() {
       <Switch>
         <Route path='/surveys'>
           <AnswerSurveys />
-
         </Route>
         <Route path='/'>
           <Survey />

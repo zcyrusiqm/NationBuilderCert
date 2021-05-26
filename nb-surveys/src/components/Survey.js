@@ -69,13 +69,13 @@ const Survey = () => {
         <div className='container surveyContainer'>
             <h1>Create a Survey</h1>
             <form className='surveyForm'>
-                <div class='mb-3'>
-                    <label for="name" class="form-label">Survey Name</label>
-                    <input name='name' class="form-control" type="text" onChange={handleSurveyName} value={surveyName} />
+                <div className='mb-3'>
+                    <label htmlFor="name" className="form-label">Survey Name</label>
+                    <input name='name' className="form-control" type="text" onChange={handleSurveyName} value={surveyName} />
                 </div>
 
-                <div class='mb-3'>
-                    <label for="status" class="form-label">Status</label>
+                <div className='mb-3'>
+                    <label htmlFor="status" className="form-label">Status</label>
                     <select className="form-select" onChange={handleSurveyStatus}>
                         <option>
                             published
@@ -105,14 +105,14 @@ const Survey = () => {
 
                 <h3>Add a question</h3>
 
-                <div style={{ marginBottom: '1rem' }} class='mb-3'>
-                    <label for="prompt" class="form-label">Question Prompt</label>
-                    <input name='prompt' class="form-control" type="text" onChange={handleQuestionChange} value={questionInput} />
+                <div style={{ marginBottom: '1rem' }} className='mb-3'>
+                    <label htmlFor="prompt" className="form-label">Question Prompt</label>
+                    <input name='prompt' className="form-control" type="text" onChange={handleQuestionChange} value={questionInput} />
                 </div>
 
                 <p>Type: Text (for this demonstration assuming all questions are free response)</p>
 
-                <label for="status" class="form-label">Status</label>
+                <label htmlFor="status" className="form-label">Status</label>
                 <select className="form-select" onChange={handleQuestionStatus}>
                     <option value='published'>
                         published
