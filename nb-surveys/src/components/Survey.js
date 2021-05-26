@@ -66,7 +66,7 @@ const Survey = () => {
     }
 
     return (
-        <div className='surveyContainer'>
+        <div className='container surveyContainer'>
             <h1>Create a Survey</h1>
             <form className='surveyForm'>
                 <div class='mb-3'>
@@ -76,7 +76,7 @@ const Survey = () => {
 
                 <div class='mb-3'>
                     <label for="status" class="form-label">Status</label>
-                    <select onChange={handleSurveyStatus}>
+                    <select className="form-select" onChange={handleSurveyStatus}>
                         <option>
                             published
                         </option>
@@ -113,7 +113,7 @@ const Survey = () => {
                 <p>Type: Text (for this demonstration assuming all questions are free response)</p>
 
                 <label for="status" class="form-label">Status</label>
-                <select onChange={handleQuestionStatus}>
+                <select className="form-select" onChange={handleQuestionStatus}>
                     <option value='published'>
                         published
                     </option>
@@ -129,11 +129,11 @@ const Survey = () => {
 
                 <br />
 
-                <button onClick={addQuestion} style={{ marginTop: '1rem ' }}>Add Question</button>
+                <button className="btn btn-secondary" onClick={addQuestion} style={{ marginTop: '1rem ' }}>Add Question</button>
 
             </form>
 
-            <button onClick={surveySubmit} class="btn btn-primary" type='submit'>Create Survey</button>
+            <button onClick={surveySubmit} className="btn btn-primary" type='submit'>Create Survey</button>
         </div>
     )
 
