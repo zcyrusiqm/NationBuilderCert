@@ -33,7 +33,7 @@ const AnswerSurveys = () => {
 
                 <div class='mb-3'>
                     <label for="response" class="form-label">Response</label>
-                    <input name='response' class="form-control" type="text" onChange={handleResponse} value={response} />
+                    <textarea name='response' class="form-control" onChange={handleResponse} value={response} />
                 </div>
 
                 <button className='btn btn-primary' onClick={handleSubmit}>Submit Response</button>
