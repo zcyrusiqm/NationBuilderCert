@@ -2,16 +2,18 @@
 //Display most recent survey and have user answer that
 //When they hit the submit button axios post call to /api/v1/survey_responses
 import { useState } from 'react';
-
+import axios from 'axios';
+const API_URL = 'placeholder'
 const AnswerSurveys = () => {
     const [response, setResponse] = useState('')
 
+    //handles input value of text area of survey question
     const handleResponse = (e) => {
         setResponse(e.target.value)
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    //log contact on succesful completion fo survey question
+    const logContact = async () => {
         const responseObj = {
             "survey_id": '',
             "person_id": '',
@@ -23,6 +25,16 @@ const AnswerSurveys = () => {
             ]
         }
         console.log(responseObj)
+
+        //let returnedResponse = await axios.post(`${API_URL}/api/v1/survey_responses`,responseObj)
+        //return returnedResponse.data;
+
+    }
+
+    //function for submit button
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        logContact()
     }
 
     return (
