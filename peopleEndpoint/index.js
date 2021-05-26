@@ -31,8 +31,9 @@ const handleSubmit = (event) => {
 
 const handleDelete = (event) => {
     event.preventDefault();
-    const content = event.target.parentNode;
-    console.log(content)
+    const personId = event.target.id;
+    console.log(personId)
+    //call deletePerson(personId)
 }
 
 const form = document.getElementsByClassName('formInput')[0]
