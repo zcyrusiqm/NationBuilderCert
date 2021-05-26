@@ -1,8 +1,9 @@
-# Nation Builder Surveys + Contact web app
+# Nation Builder People API Endpoint web app
 
 ## Purpose of this application
-- Allow user to create a Nation Builder Survey 
-- Log a contact when someone answers a survey question
+- Create a person
+- Update the person
+- Delete the person
 
 ## Available Scripts
 

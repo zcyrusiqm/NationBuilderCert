@@ -1,8 +1,9 @@
-# Nation Builder Surveys + Contact web app
+# Nation Builder Events API Endpoint web app
 
 ## Purpose of this application
-- Allow user to create a Nation Builder Survey 
-- Log a contact when someone answers a survey question
+
+- Create an event with a form
+- Update the event with a form
 
 ## Available Scripts
 
