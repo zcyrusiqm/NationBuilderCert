@@ -8,6 +8,7 @@ const handleSubmit = (event) => {
     let formInputs = new FormData(form);
     const formJSON = Object.fromEntries(formInputs.entries())
     console.log(formJSON)
+    //createEvent(formJSON)
 }
 
 //have to handle cases where input fields are empty
@@ -16,19 +17,20 @@ const handleUpdateSubmit = (event) => {
     const form = event.target
     let formInputs = new FormData(form);
     const formJSON = Object.fromEntries(formInputs.entries())
-    console.log(formJSON)
+    console.log(formJSON)//
+    //updateEvent(formJSON)
 }
 
 //function to make axios post to NationBuilder API create event endpoint
 const createEvent = (data) => {
     //data should already be an object
-    axios.post(`${API_URL}/sites/:site_slug/pages/events`, data)
+    axios.post(`${API_URL}/api/v1/sites/:site_slug/pages/events`, data)
 
 }
 
 //function to make axios post to NationBuilder API to update event endpoint
 const updateEvent = (data) => {
-    axios.put(`${API_URL}/sites/:site_slug/pages/events/:id`, data)
+    axios.put(`${API_URL}/api/v1/sites/:site_slug/pages/events/:id`, data)
 }
 
 //function to fetch current event lists
