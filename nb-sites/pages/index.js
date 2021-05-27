@@ -1,7 +1,12 @@
+import NavBar from '../components/NavBar'
 import PersonForm from '../components/PersonForm'
 
 export default function Home() {
   return (
-    <PersonForm/>
+    <div className='container-md'>
+      <NavBar/>
+      <PersonForm/>
+    </div>
+    
   )
 }

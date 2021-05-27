@@ -1,9 +1,16 @@
 import PersonList from '../../components/PersonList'
 import axios from 'axios'
+import NavBar from '../../components/NavBar'
 const API_URL = 'placeholder_url'
 
 const PeoplePage = ({people}) => {
-    return <PersonList people={people} />
+
+    return (
+        <div className='container-md'>
+            <NavBar/>
+            <PersonList people={people} />
+        </div>
+    )
 }
 
 export default PeoplePage;
