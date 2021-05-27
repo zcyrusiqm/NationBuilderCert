@@ -20,16 +20,28 @@ const displayPeople = (peopleList) => {
         let personRow = document.createElement("div")
         personRow.className = 'list-group-item';
 
+        //titleTag h5
         let personTitleTag = document.createElement("H5")
         let personName = document.createTextNode(item.first_name + " " + item.last_name);
         personTitleTag.appendChild(personName)
         personRow.appendChild(personTitleTag)
+
+        //small element
+        let smallElement  = document.createElement('small');
+        smallElement.innerHTML = item.id;
+        let breakElement = document.createElement('br')
+        personRow.appendChild(smallElement)
+        personRow.appendChild(breakElement)
         
+        //delete button
         let deleteButton = document.createElement("button")
         deleteButton.innerHTML = 'Delete'
         deleteButton.className ='mt-3 btn btn-danger deleteBtn'
         deleteButton.id = item.id
         personRow.appendChild(deleteButton)
+
+        
+        //personList
         let personList = document.getElementById('personList');
         personList.appendChild(personRow)
 
