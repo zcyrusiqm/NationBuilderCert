@@ -1,5 +1,5 @@
 import {useState} from 'react'
-
+import axios from 'axios'
 const PersonForm = () => {
 
     const [person, setPerson] = useState({
@@ -20,6 +20,7 @@ const PersonForm = () => {
         })
     }
 
+    //function to make post call to people endpoint to create a new person
     const createPerson = async (data) => {
         let returnedPerson = await axios.post(`${API_URL}/api/v1/people`, data)
         return returnedPerson.data;
