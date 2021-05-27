@@ -8,4 +8,4 @@ const PeopleCard = ({person}) => {
     )
 }
 
-export default PersonCard;
+export default PeopleCard;

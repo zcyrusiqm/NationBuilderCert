@@ -2,8 +2,8 @@ import PersonList from '../../components/PersonList'
 import axios from 'axios'
 const API_URL = 'placeholder_url'
 
-const PeoplePage = () => {
-    <PersonList people={people} />
+const PeoplePage = ({people}) => {
+    return <PersonList people={people} />
 }
 
 export default PeoplePage;
