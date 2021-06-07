@@ -1,4 +1,4 @@
-//waiting for API key
+//waiting for API key will be placed in env file later.
 const API_URL = 'placeholder'
 
 //submit function for create an event form;
