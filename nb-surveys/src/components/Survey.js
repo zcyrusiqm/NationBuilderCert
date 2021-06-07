@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import axios from 'axios'
 
 const Survey = () => {
     const [questionInput, setQuestionInput] = useState('')
@@ -58,11 +58,13 @@ const Survey = () => {
             "questions": questions
         }
         console.log(surveyObj)
+        //call surveyPost(surveyObj)
     }
 
     //function to make axios post call to create a survey
-    const surveyPost = (survey) => {
-        
+    const surveyPost = async (survey) => {
+        let createSurvey = await axios.post(`${API_PLACEHOLDER}/api/v1/sites/:site_slug/pages/surveys`,survey)
+        return createSurvey.data;
     }
 
     return (

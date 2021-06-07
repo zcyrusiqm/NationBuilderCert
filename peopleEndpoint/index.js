@@ -1,7 +1,7 @@
 const API_URL = 'placeholder'
 
 const fetchPeople = async () => {
-    //once I have api access replace will be replaced with getPeople()
+    //once I have api access listOfPeople will = getPeople()
     let listOfPeople = await fetch('./fakePeople.json');
     const response = await listOfPeople.json()
     return response.results;
@@ -65,6 +65,7 @@ const deletePerson = async (id) => {
     return personToDelete.data;
 }
 
+//function that allows submit button to create a person on click
 const handleSubmit = (event) => {
     event.preventDefault()
     const form = event.target
@@ -102,7 +103,7 @@ const handleUpdateSubmit = async (event) => {
 }
 
 
-
+//function that delete a created person.
 const handleDelete = (event) => {
     event.preventDefault();
     const personId = event.target.id;
@@ -115,6 +116,9 @@ form.addEventListener("submit", handleSubmit);
 const updateForm = document.getElementsByClassName('updateForm')[0]
 updateForm.addEventListener("submit", handleUpdateSubmit)
 
+
+//fetches list of currently created people.
+//adds delete button to each currently created person.
 window.onload = async () => {
     const listOfPeople = await fetchPeople()
     displayPeople(listOfPeople)

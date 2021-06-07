@@ -1,4 +1,4 @@
-//Axios get current surveys from API endpoint first /api/v1/sites/:site_slug/pages/surveys
+//Axios GET current surveys from API endpoint /api/v1/sites/:site_slug/pages/surveys
 //Display most recent survey and have user answer that
 //When they hit the submit button axios post call to /api/v1/survey_responses
 // Survey id, question id, and person id will be fetched on page load
@@ -13,9 +13,10 @@ const AnswerSurveys = () => {
         setResponse(e.target.value)
     }
 
-    //log contact on succesful completion fo survey question
+    //log contact on succesful completion of survey question
     const logContact = async () => {
         const responseObj = {
+            //following blanks will changed once I have access to sandbox due to data being retrieved from API
             "survey_id": '',
             "person_id": '',
             "question_responses": [
