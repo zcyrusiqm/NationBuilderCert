@@ -33,6 +33,7 @@ const PersonForm = () => {
         //call createPerson
     }
 
+    //returns a form that allows a user to create a person with first name, last name, phone number, and email
     return (
         <div className='container'>
             <div className="createPerson mb-5">
@@ -41,22 +42,22 @@ const PersonForm = () => {
             <form onSubmit={handleSubmit} className='formInput'>
                 <div className='mb-3'>
                     <label htmlFor="first_name" className="form-label">First Name</label>
-                    <input onChange={handleChange} name='first_name' className="form-control" type="text"/>
+                    <input onChange={handleChange} name='first_name' className="form-control" type="text" required/>
                 </div>
 
                 <div className='mb-3'>
                     <label htmlFor="last_name" className="form-label">Last Name</label>
-                    <input onChange={handleChange} name='last_name' className="form-control" type="text"/>
+                    <input onChange={handleChange} name='last_name' className="form-control" type="text" required/>
                 </div>
 
                 <div className='mb-3'>
                     <label htmlFor="email" className="form-label">Email</label>
-                    <input onChange={handleChange} name='email' className="form-control" type="email"/>
+                    <input onChange={handleChange} name='email' className="form-control" type="email" required/>
                 </div>
 
                 <div className='mb-3'>
                     <label htmlFor="phone" className="form-label">Phone Number</label>
-                    <input onChange={handleChange} name="phone" className="form-control" type="tel"/>
+                    <input onChange={handleChange} name="phone" className="form-control" type="tel" required/>
                 </div>
 
                 <button className="btn btn-primary" type='submit'>Create Person</button>

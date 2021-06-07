@@ -1,4 +1,5 @@
 import Link from 'next/link'
+//nabar for navigation between form to create a person and view current person list
 
 const NavBar = () => {
 

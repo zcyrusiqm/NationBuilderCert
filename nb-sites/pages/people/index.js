@@ -5,6 +5,8 @@ const API_URL = 'placeholder_url'
 
 const PeoplePage = ({people}) => {
 
+  //returns navbar and a list of current of people fetched from Nation Builder people API endpoint
+
     return (
         <div className='container-md'>
             <NavBar/>

@@ -1,3 +1,5 @@
+//component that displays a person's name, sex, party
+// person prop should always be an object
 const PeopleCard = ({person}) => {
     return (
         <div className='card mb-4 p-4'>
